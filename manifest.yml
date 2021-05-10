@@ -1,0 +1,7 @@
+ applications:
+ - name: [CF actividadeskar]
+   memory: Specify the memory needed.
+   buildpack: Specify the dedicated buildback.[ https://github.com/cloudfoundry/php-buildpack ]
+   random-route: true  #For testing purposes a newly generated URL will be used instead of specifying a dedicated one.
+   env:
+     APP_DEBUG: true

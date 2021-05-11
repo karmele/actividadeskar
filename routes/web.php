@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Actividad;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/* 
 Route::get('/', function () {
     return view('welcome');
+}); */
+Route::get('/', function () {
+    $actividades= Actividad::all();
+    return view('actividades1', ['actividades'=>$actividades]);
 });
+
